@@ -1,3 +1,4 @@
+function GetNearestTarget()
 -- I did not make this, its just a function i use a lot and i dont want the bulk of it in my script
 	local players = {}
 	local PLAYER_HOLD  = {}
