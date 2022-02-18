@@ -10,9 +10,9 @@ function GetNearestTarget()
 	end
 	for i, v in pairs(players) do
 		if v.Character ~= nil then
-			local AIM = v.Character:FindFirstChild("Head")
+			local AIM = v.Character:FindFirstChild("HumanoidRootPart")
 			if v.Team ~= game.Players.LocalPlayer.Team then
-				local DISTANCE = (v.Character:FindFirstChild("Head").Position - game.Workspace.CurrentCamera.CFrame.p).magnitude
+				local DISTANCE = (v.Character:FindFirstChild("HumanoidRootPart").Position - game.Workspace.CurrentCamera.CFrame.p).magnitude
 				local RAY = Ray.new(game.Workspace.CurrentCamera.CFrame.p, (game.Players.LocalPlayer:GetMouse().Hit.p - game.Workspace.CurrentCamera.CFrame.p).unit * DISTANCE)
 				local HIT,POS = game.Workspace:FindPartOnRay(RAY, game.Workspace)
 				local DIFF = math.floor((POS - AIM.Position).magnitude)
